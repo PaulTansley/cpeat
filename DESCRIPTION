@@ -1,11 +1,22 @@
 Package: cpeat
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Title: Peatland decomposition and carbon models
+Version: 0.2.0
+Author: Paul Tansley
+Maintainer: Paul Tansley  <pt360@exeter.ac.uk>
+Description: 
+    A collection of various peatland decompositon and carbon dynamics models. 
+    These are the Clymo 1984 (clymo) model, the 'peatland decompostion model' (pdm), developed by Frolking et al,
+    and the'super peatland' model (mega_bog) developed by Zicheng Yu.
+    
+    Clymo model: https://doi.org/10.1098/rstb.1984.0002
+    Peatland Decomposition model: https://link.springer.com/article/10.1007/s10021-001-0105-1
+    Super Peatland model: https://doi.org/10.1177/0959683610386982
+Depends: R (>= 3.1.0)
+Imports: 
+    tidyverse
+    imputeTS
+    forestmangr
+License: GPL (>= 2)
 Encoding: UTF-8
 LazyData: true

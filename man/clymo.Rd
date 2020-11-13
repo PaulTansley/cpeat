@@ -5,10 +5,10 @@
 %%  ~~function to do ... ~~
 }
 \description{
-Works as a wrapper for the forestmangr nls table function. It is preprogrammed with the clymo's addition and decomposition curve. Requires a data input which must contain the columns: depth, age, site and bulk_density as spelt here. Also requires starting values for a and b (addition and decomp) Automatically groups by site, so multiple sites can be run at once.
+Works as a wrapper for the forestmangr nls_table() function. It is preprogrammed with clymo's 1984 addition and decomposition  model parameters. Requires a dataframe input which must contain the columns: depth, age, site and bulk_density as spelt here. Also requires starting values for a and b (addition and decomp).
 }
 \usage{
-clymo(data, a, b)
+clymo(data, a, b, grouping_var)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
