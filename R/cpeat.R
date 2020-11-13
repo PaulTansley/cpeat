@@ -12,13 +12,13 @@ clymo <-function(data, a = 0.01, b = 0.01, grouping_var = site){
     ungroup()
 
   nls_table(data,
-            cumulative_mass ~ (a / b) * (1 - exp(-b * age)),
+            cumulative_mass ~ (a / b) * (1 - exp(-b * zeroed_age)),
             mod_start = c(a = a, b = b),
             output = "table",
             .groups = "site"
   ) %>%
     as.data.frame%>%
-    rename(addition =b0, decomp = b1)}
+    rename(addition = b0, decomp = b1)}
 
 
 prep <- function(data, data1, grouping_var = site){
@@ -71,7 +71,7 @@ acrotelm <- function(data, grouping_var = site) {
            decomp_rate = ifelse(decomp_rate == 0, decomp_rate1, decomp_rate),
            peat_decomp = ifelse(peat_decomp == 0, peat_decomp1, peat_decomp)) %>%
     select(!c(annual_layers1, mass_loss1, decomp_rate1, peat_decomp1, depth, age,
-              zeroed_age, bulk_density, t, carbon, addition, decomp)) %>%
+              zeroed_age, bulk_density, t, carbon)) %>%
     ungroup()}
 
 
